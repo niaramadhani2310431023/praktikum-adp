@@ -1,0 +1,20 @@
+program Menentukan_volume_dan_luas_permukaan_prisma_segitiga_samakaki;
+
+var
+a, c, t_segitiga, t_prisma, v, ka, lp : real ;
+
+begin
+write ('masukan panjang alas segitiga: ') ;
+ReadLn (a);
+write ('masukan panjang sisi miring segitiga: ') ;
+ReadLn (c) ;
+write ('masukan tinggi segitiga:') ;
+Readln (t_segitiga) ;
+write ('masukan tinggi prisma:') ;
+readLn (t_prisma) ;
+v:=1/2*a*t_segitiga*t_prisma ;
+ka:=a+c+c ;
+lp:=(a*t_segitiga) +(ka*t_prisma) ;
+WriteLn ('volume prisma adalah :', v) ;
+WriteLn ('Luas permukaan prisma adalah:', lp) ;
+end. 

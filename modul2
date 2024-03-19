@@ -1,0 +1,33 @@
+print('program gojol') 
+print() 
+
+print('selamat datang di program gojol')
+nama=input('silahkan masukkan nama anda : ')
+print('selamat berbelanja ',nama)
+
+print('silahkan pilih menu paket pilihan anda')
+print('daftar paket makanan : ')
+print('paket A = 25000')
+print('paket B = 30000')
+print('paket C = 45000')
+
+paket=input('masukkan pilihan paket makanan anda (A/B/C): ').upper()
+if paket == 'A':
+    paket=25000
+elif paket == 'B':
+    paket=30000
+elif paket == 'C':
+    paket=45000
+else:
+    print('paket tidak tersedia')
+
+jarak=float(input('masukkan jarak pesanan anda(km): '))
+if jarak < 0.5:
+    ongkir= 0
+elif 0.5<= jarak <= 1.5:
+    ongkir= 10000
+else:
+    ongkir= 20000
+
+total_biaya=paket+ongkir
+print('total biaya pesanan anda adalah Rp',total_biaya)

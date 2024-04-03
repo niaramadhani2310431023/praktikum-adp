@@ -1,0 +1,51 @@
+Print("Selamat datang di Gomart")
+print("silahkan pilih belanjaan anda") 
+print()
+
+print("Program Daftar Barang")
+print()
+
+daftar_barang = {
+    "Jilbab": 25000,
+    "Ciput": 5000,
+    "Baju": 70000
+}
+
+belanja = []
+while True:
+    barang = input("Masukkan jenis barang (Jilbab/Ciput/Baju) atau ketik 'Selesai' untuk mengakhiri: ")
+    if barang == "Selesai" :
+        break
+    if barang not in daftar_barang:
+        print("Barang tidak valid. Silakan masukkan barang yang valid.")
+        continue
+    jumlah = int(input("Masukkan jumlah barang yang ingin dibeli: "))
+    belanja.append((barang, jumlah))
+
+total_harga_sebelum_diskon = 0
+for barang, jumlah in belanja:
+    total_harga_sebelum_diskon += daftar_barang[barang] * jumlah
+
+diskon_barang_total = 0
+for barang, jumlah in belanja:
+    if barang == "Jilbab" and jumlah > 2:
+        diskon_barang_total += 0.25 * daftar_barang[barang] * jumlah
+
+total_harga_setelah_diskon_barang = total_harga_sebelum_diskon - diskon_barang_total
+
+if total_harga_setelah_diskon_barang > 200000:
+    diskon_total = 0.25 * total_harga_setelah_diskon_barang
+else:
+    diskon_total = 0
+
+total_harga_setelah_diskon_total = total_harga_setelah_diskon_barang - diskon_total
+
+print("\n=== Nota Pembelian ===")
+for barang, jumlah in belanja:
+    print(f"{barang}: {jumlah} pcs x Rp {daftar_barang[barang]} = Rp {jumlah * daftar_barang[barang]}")
+print("-----------------------")
+print(f"Total harga sebelum diskon: Rp {total_harga_sebelum_diskon}")
+print(f"Total diskon untuk barang: Rp {diskon_barang_total}")
+print(f"Total harga setelah diskon barang: Rp {total_harga_setelah_diskon_barang}")
+print(f"Diskon total belanja: Rp {diskon_total}")
+print(f"Total harga setelah diskon total: Rp {total_harga_setelah_diskon_total}")

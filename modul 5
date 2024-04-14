@@ -1,0 +1,15 @@
+nilai_x = list(range(-10, 11))
+f_x = []
+
+for x in nilai_x:
+    if x > 0 :
+        f = x**2 + 2*x
+    elif x < 0:
+        f = 1 / x
+    else:
+        f = 10
+    f_x.append(f)
+
+print("| x | f(x) |")
+for i in range(len(nilai_x)):
+    print(f"| {nilai_x[i]} | {f_x[i]:.3f} |")

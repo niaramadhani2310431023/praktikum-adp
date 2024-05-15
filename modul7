@@ -1,0 +1,38 @@
+def input_data(n):
+    data = []
+    for i in range(n):
+        input_value = float(input("Masukkan data ke-{}: ".format(i+1)))
+        data.append(input_value)
+    return data
+def hitung_mean(data):
+    total = sum(data)
+    mean = total / len(data)
+    return mean
+
+def hitung_modus(data):
+    counts = {}
+    for value in data:
+        if value in counts:
+            counts[value] += 1
+        else:
+            counts[value] = 1
+    modus = max(counts, key=counts.get)
+    return modus
+
+def hitung_varians(data):
+    mean = hitung_mean(data)
+    squared_diff = [(x - mean) ** 2 for x in data]
+    varians = sum(squared_diff) / len(data)
+    return varians
+def tampilkan_hasil(data):
+    mean = hitung_mean(data)
+    modus = hitung_modus(data)
+    varians = hitung_varians(data)
+    
+    print("║ Mean            ║ {:<17.2f} ║".format(mean))
+    print("║ Modus           ║ {:<17} ║".format(modus))
+    print("║ Varians         ║ {:<17.2f} ║".format(varians))
+    
+n = int(input("Masukkan jumlah data: "))
+data = input_data(n)
+tampilkan_hasil(data)

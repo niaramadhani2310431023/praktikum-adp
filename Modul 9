@@ -1,0 +1,57 @@
+import os
+from termcolor import colored,cprint
+
+os.system('cls')
+#barispertama
+for i in range (4):
+	cprint(' '*4,'red','on_red',end=" ")
+	print(' ',end="")
+cprint(' '*9,'red','on_red')
+#bariskedua
+for i in range (4):
+	cprint(' '*4,'red','on_red',end=" ")
+	print(' ',end="")
+cprint(' '*9,'red','on_red')
+
+#barisketiga
+for j in range(3):
+    cprint(' '*4,'red','on_red',end=" ")
+    print(' ',end="")
+print(" ")
+
+#bariskeempat
+for k in range(3):
+    cprint(' '*4,'red','on_red',end=" ")
+    print(' ',end="")
+cprint (" "*4,"grey","on_dark_grey",end=" ")
+print(" ",end="")
+cprint(' '*4,'red','on_red')
+#bariskelima
+cprint(' '*4,'red','on_red',end=" ")
+print(" "*7,end="")
+cprint('  '*2,'red','on_red',end=" ")
+print(' ',end="")
+
+cprint (" "*4,"grey","on_dark_grey",end=" ")
+print(" ",end="")
+cprint(' '*4,'red','on_red')
+
+#bariskeenam
+cprint(' '*4,'red','on_red',end=" ")
+print(" "*7,end="")
+cprint('  '*2,'red','on_red',end=" ")
+print(' ',end="")
+
+cprint (" "*4,"grey","on_dark_grey",end=" ")
+print(" ",end="")
+cprint(' '*4,'red','on_red')
+
+#barisketujuh
+cprint(' '*4,'red','on_red',end=" ")
+print(" "*7,end="")
+cprint('  '*2,'red','on_red',end=" ")
+print(' ',end="")
+
+cprint (" "*4,"grey","on_dark_grey",end=" ")
+print(" ",end="")
+cprint(' '*4,'red','on_red')
